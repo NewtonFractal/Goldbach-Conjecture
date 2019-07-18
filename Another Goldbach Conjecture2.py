@@ -27,7 +27,7 @@ def goldbach_checker(number):
             for y in primelist:
                 if y >= z:
                     break
-                if x+y >= number:
+                if x+y >= number or x+y > z:
                     break
                 if x >= y:
                     if x+y == z:
