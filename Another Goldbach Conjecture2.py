@@ -1,7 +1,7 @@
 import time
 import math
 start = time.time()
-primelist= [2]
+primelist= []
 goldbach_found =[]
 
 def primefinder(number):
@@ -19,7 +19,7 @@ number= 20000
 primefinder(number)
 
 def goldbach_checker(number):
-    z = 4
+    z = 6
     while z < number-2:
         for x in primelist:
             if x >= z:
