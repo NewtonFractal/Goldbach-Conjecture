@@ -20,28 +20,26 @@ primefinder(number)
 
 def goldbach_checker(number):
     z = 6
-    while z < number-2:
+    while z < number:
         for x in primelist:
             if x >= z:
                 break
             for y in primelist:
-                if y >= z:
-                    break
                 if x+y >= number or x+y > z:
                     break
-                if x >= y:
-                    if x+y == z:
-                        print(str(x) + "+" + str(y) + "=" + str(x+y))
-                        z += 2
-                        goldbach_found.append(x+y)
+                if x+y == z:
+                    print(str(x) + "+" + str(y) + "=" + str(x+y))
+                    z += 2
+                    if z == number:
+                        return None
+                    goldbach_found.append(x+y)
                 else:
-                    break
+                    continue
 
 goldbach_checker(number)
 
-if len(goldbach_found) != (number/2)-3:
+if len(goldbach_found) != (number/2)-4:
     print("Goldbach Conjecture disproved")
-
 
 end = time.time()
 print(end - start)
