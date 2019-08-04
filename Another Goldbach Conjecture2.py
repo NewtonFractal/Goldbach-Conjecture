@@ -39,7 +39,7 @@ def goldbach_checker(number):
 
 goldbach_checker(number)
 
-if len(goldbach_found) != (number/2)-2:
+if len(goldbach_found) != (number/2)-3:
     print("Goldbach Conjecture disproved")
 
 
