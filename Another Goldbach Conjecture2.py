@@ -34,7 +34,6 @@ def goldbach_checker(number):
                         print(str(x) + "+" + str(y) + "=" + str(x+y))
                         z += 2
                         goldbach_found.append(x+y)
-                        break
                 else:
                     break
 
